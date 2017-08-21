@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-21T07:16:11.951Z</updated>
+  <updated>2017-08-21T10:10:36.236Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二叉树中和为某一值的路径</title>
+    <link href="http://yoursite.com/2017/08/21/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/"/>
+    <id>http://yoursite.com/2017/08/21/二叉树中和为某一值的路径/</id>
+    <published>2017-08-21T09:28:06.000Z</published>
+    <updated>2017-08-21T10:10:36.236Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。<br>路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong>注意</strong>问题描述中的路径是从根节点到<strong>叶节点</strong>，搜索策略应该采用广度优先搜索，也就是先序遍历</p>
+<p>需要两个存储变量，一个变量<strong>path</strong>存储当前搜索路径上的所有节点，一个变量<strong>result</strong>存储符合要求的所有路径<br>每当搜索到一个节点，都将当前节点添加到<strong>path</strong>中<br>当搜索到叶子节点时，判断当前路径上的节点值的和是否与目标值相等，相等则将当前路径添加到<strong>result</strong>中，之后在<strong>path</strong>中将当前叶子节点移除，回溯到上个节点继续判断<br>由此可以看出<strong>path</strong>的操作数据的方式跟<strong>栈(Stack)</strong>很相似，可以将<strong>path</strong>定义成<strong>栈(Stack)</strong></p>
+<p>判断路径上的节点值的和是否与<strong>目标值</strong>相等时，可以有两种方法：</p>
+<ol>
+<li><strong>target</strong>值初始为0，每当搜索到一个节点，把节点值累加到<strong>target</strong>上，搜索到叶子节点时判断<strong>target</strong>值与<strong>目标值</strong>是否一致</li>
+<li><strong>target</strong>值初始为<strong>目标值</strong>，每当搜索到一个节点，下次搜索时将<strong>target</strong>值减去当前节点值，搜索到叶子节点时判断<strong>target</strong>值与叶子节点值是否一致<br>本次程序采用的时第2种方法</li>
+</ol>
+<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二叉树的数据结构</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> val=<span class="number">0</span>;</div><div class="line">	TreeNode left=<span class="keyword">null</span>;</div><div class="line">	TreeNode right=<span class="keyword">null</span>;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span></span>&#123;<span class="keyword">this</span>.val=val;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; FindPath(TreeNode root,<span class="keyword">int</span> target) &#123;</div><div class="line">		ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result=<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</div><div class="line">		<span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">		Stack&lt;Integer&gt; path=<span class="keyword">new</span> Stack&lt;Integer&gt;();</div><div class="line">		pathList(root,target,result,path);</div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	参数：二叉树的根节点，目标值，当前符合的所有路径，当前的搜索路径</span></div><div class="line"><span class="comment">	返回：无</span></div><div class="line"><span class="comment">	*/</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pathList</span><span class="params">(TreeNode root,<span class="keyword">int</span> target,ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result,Stack&lt;Integer&gt; path)</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> num=root.val;</div><div class="line">		<span class="comment">//将当前搜索节点加入path中</span></div><div class="line">		path.push(num);</div><div class="line">		<span class="comment">//当搜索到叶子节点时</span></div><div class="line">		<span class="keyword">if</span>(root.left==<span class="keyword">null</span> &amp;&amp; root.right==<span class="keyword">null</span>)&#123;</div><div class="line">			<span class="comment">//当前节点值与target值相等，说明path中的路径符合要求</span></div><div class="line">			<span class="keyword">if</span>(num==target)&#123;</div><div class="line">				ArrayList&lt;Integer&gt; tmp=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i:path)&#123;</div><div class="line">					tmp.add(i);</div><div class="line">				&#125;</div><div class="line">				<span class="comment">//将当前搜索路径加入到result中</span></div><div class="line">				result.add(tmp);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		注意每次递归向下搜索时应该将target值减去已搜索的节点值</span></div><div class="line"><span class="comment">		每次回溯时应该移除该节点值</span></div><div class="line"><span class="comment">		*/</span></div><div class="line">		<span class="keyword">if</span>(root.left!=<span class="keyword">null</span>)&#123;</div><div class="line">			pathList(root.left,target-num,result,path);</div><div class="line">			path.pop();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(root.right!=<span class="keyword">null</span>)&#123;</div><div class="line">			pathList(root.right,target-num,result,path);</div><div class="line">			path.pop();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。&lt;br&gt;路径定义为从树的根结点开始往下一直到叶结点所
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>重建二叉树</title>
