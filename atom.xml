@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-01T10:07:20.911Z</updated>
+  <updated>2017-09-01T10:27:03.435Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/09/01/SSM%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/"/>
     <id>http://yoursite.com/2017/09/01/SSM框架搭建及简单应用/</id>
     <published>2017-09-01T08:37:47.000Z</published>
-    <updated>2017-09-01T10:07:20.911Z</updated>
+    <updated>2017-09-01T10:27:03.435Z</updated>
     
     <content type="html"><![CDATA[<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ul>
 <li>IntelliJ IDEA</li>
@@ -76,7 +76,8 @@
 </li>
 </ol>
 <p>showUser.jsp<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> prefix=<span class="string">"c"</span> %&gt;</div><div class="line">&lt;%@ page isELIgnored=<span class="string">"false"</span> pageEncoding=<span class="string">"utf-8"</span> %&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">user = $&#123;user&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2>]]></content>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>配置Tomcat启动后，浏览器输入<a href="http://localhost:8080/index" target="_blank" rel="external">http://localhost:8080/index</a><br><img src="http://ov0hfjxnq.bkt.clouddn.com/index%E7%BB%93%E6%9E%9C.png" alt=""><br>点击submit，转发到<a href="http://localhost:8080/showUser" target="_blank" rel="external">http://localhost:8080/showUser</a><br><img src="http://ov0hfjxnq.bkt.clouddn.com/showUser%E7%BB%93%E6%9E%9C.png" alt=""></p>
+]]></content>
     
     <summary type="html">
     
