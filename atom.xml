@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-05T09:24:35.851Z</updated>
+  <updated>2017-09-05T09:27:39.554Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/09/05/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88Redis/"/>
     <id>http://yoursite.com/2017/09/05/SSM框架整合Redis/</id>
     <published>2017-09-05T08:11:37.000Z</published>
-    <updated>2017-09-05T09:24:35.851Z</updated>
+    <updated>2017-09-05T09:27:39.554Z</updated>
     
-    <content type="html"><![CDATA[<p>上一篇博文<a href="https://zprestonx.github.io/2017/09/01/SSM%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" title="SSM框架搭建及简单应用" target="_blank" rel="external">https://zprestonx.github.io/2017/09/01/SSM%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/</a>中已经介绍了SSM框架的搭建流程，这次将在前面搭建的SSM框架基础上整合Redis。Redis是一种key-value数据库，不同于传统的关系型数据库，Redis是一种非关系型数据库（NoSQL），其数据类型包括字符串、列表、集合和有序集合。由于Redis在内存操作数据，存取方便快捷，但易受内存容量的限制，所以一般不将Redis用作主数据库，而是用来存取一些数据量小且对实时性要求较高的数据，比如缓存场景。在介绍完整合Redis的流程后，我会写一个通过Redis实现缓存的例子。</p>
+    <content type="html"><![CDATA[<p>上一篇博文<a href="https://zprestonx.github.io/2017/09/01/SSM框架搭建及简单应用/" title="SSM框架搭建及简单应用" target="_blank" rel="external">https://zprestonx.github.io/2017/09/01/SSM框架搭建及简单应用/</a>中已经介绍了SSM框架的搭建流程，这次将在前面搭建的SSM框架基础上整合Redis。Redis是一种key-value数据库，不同于传统的关系型数据库，Redis是一种非关系型数据库（NoSQL），其数据类型包括字符串、列表、集合和有序集合。由于Redis在内存操作数据，存取方便快捷，但易受内存容量的限制，所以一般不将Redis用作主数据库，而是用来存取一些数据量小且对实时性要求较高的数据，比如缓存场景。在介绍完整合Redis的流程后，我会写一个通过Redis实现缓存的例子。</p>
 <h2 id="SSM整合Redis"><a href="#SSM整合Redis" class="headerlink" title="SSM整合Redis"></a>SSM整合Redis</h2><ol>
 <li><p>在pom.xml中添加依赖包</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- spring-redis --&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.data<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.6.2.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"></div><div class="line">   <span class="comment">&lt;!-- redis客户端 --&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -75,7 +75,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;上一篇博文&lt;a href=&quot;https://zprestonx.github.io/2017/09/01/SSM%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8
+      &lt;p&gt;上一篇博文&lt;a href=&quot;https://zprestonx.github.io/2017/09/01/SSM框架搭建及简单应用/&quot; title=&quot;SSM框架搭建及简单应用&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zprestonx
     
     </summary>
     
