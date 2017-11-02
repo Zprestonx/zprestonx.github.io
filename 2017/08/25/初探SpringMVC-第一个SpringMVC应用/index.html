@@ -48,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="http://ov0hfjxnq.bkt.clouddn.com/personal_pic.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">Zpreston</a></h1>
@@ -60,7 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/JavaWeb/">JavaWeb</a></li>
+	        
+				<li><a href="/tags/算法/">算法</a></li>
 	        
 			</ul>
 		</nav>
@@ -102,13 +104,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="http://ov0hfjxnq.bkt.clouddn.com/personal_pic.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Zpreston</h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -127,12 +131,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/JavaWeb/">JavaWeb</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/算法/">算法</a></li>
 		        
 				</ul>
 			</nav>
@@ -318,6 +324,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2017/08/25/初探SpringMVC-第一个SpringMVC应用/",
+  owner: '18019829',
+  repo: 'BlogCommentRepo',
+  oauth: {
+    client_id: '3ef7851f993b04f6d5a8',
+    client_secret: 'afb7d01788a5f368664d47e2b161b6e7b99293c3',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -344,8 +366,8 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
-		toc_hide_index: true,
+		open_in_new: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
