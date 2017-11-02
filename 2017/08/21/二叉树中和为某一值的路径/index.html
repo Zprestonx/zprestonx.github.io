@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>二叉树中和为某一值的路径 | Zpreston</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。 分析注意问题描述中的路径是从根节点到叶节点，搜索策略应该采用广度优先搜索，也就是先序遍历 需要两个存储变量，一个变量path存储当前搜索路径上的所有节点，一个变量result存储符合要求的所有路径每当搜索到一个节点，都将当前节点添加到path中当搜索">
+  <meta name="description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二叉树中和为某一值的路径">
 <meta property="og:url" content="http://yoursite.com/2017/08/21/二叉树中和为某一值的路径/index.html">
 <meta property="og:site_name" content="Zpreston">
-<meta property="og:description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。 分析注意问题描述中的路径是从根节点到叶节点，搜索策略应该采用广度优先搜索，也就是先序遍历 需要两个存储变量，一个变量path存储当前搜索路径上的所有节点，一个变量result存储符合要求的所有路径每当搜索到一个节点，都将当前节点添加到path中当搜索">
+<meta property="og:description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-21T10:10:36.236Z">
+<meta property="og:updated_time" content="2017-11-02T10:26:27.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树中和为某一值的路径">
-<meta name="twitter:description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。 分析注意问题描述中的路径是从根节点到叶节点，搜索策略应该采用广度优先搜索，也就是先序遍历 需要两个存储变量，一个变量path存储当前搜索路径上的所有节点，一个变量result存储符合要求的所有路径每当搜索到一个节点，都将当前节点添加到path中当搜索">
+<meta name="twitter:description" content="问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。">
   
     <link rel="alternative" href="/atom.xml" title="Zpreston" type="application/atom+xml">
   
@@ -174,6 +174,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。<br>路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。</p>
+<a id="more"></a>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><strong>注意</strong>问题描述中的路径是从根节点到<strong>叶节点</strong>，搜索策略应该采用广度优先搜索，也就是先序遍历</p>
 <p>需要两个存储变量，一个变量<strong>path</strong>存储当前搜索路径上的所有节点，一个变量<strong>result</strong>存储符合要求的所有路径<br>每当搜索到一个节点，都将当前节点添加到<strong>path</strong>中<br>当搜索到叶子节点时，判断当前路径上的节点值的和是否与目标值相等，相等则将当前路径添加到<strong>result</strong>中，之后在<strong>path</strong>中将当前叶子节点移除，回溯到上个节点继续判断<br>由此可以看出<strong>path</strong>的操作数据的方式跟<strong>栈(Stack)</strong>很相似，可以将<strong>path</strong>定义成<strong>栈(Stack)</strong></p>
 <p>判断路径上的节点值的和是否与<strong>目标值</strong>相等时，可以有两种方法：</p>
