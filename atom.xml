@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Zpreston</title>
+  <title>Zpreston的博客</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-02T10:22:34.811Z</updated>
+  <updated>2017-11-08T01:40:48.867Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/11/01/spring%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/11/01/spring发送邮件/</id>
     <published>2017-11-01T08:48:44.000Z</published>
-    <updated>2017-11-02T10:22:34.811Z</updated>
+    <updated>2017-11-08T01:40:48.867Z</updated>
     
     <content type="html"><![CDATA[<p>最近刚把手上的项目忙完，趁着手头还有些空闲时间，把项目中值得记录和分享的东西写出来，今天先分享一下spring发送邮件的具体实现。</p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>要想发送邮件，肯定先要有一个邮件发送方，项目中用到的是公司的企业邮箱，如果没有的话可以使用自己的qq邮箱或者其他邮箱，只不过要先开启SMTP服务，具体方法自查哈~邮件接收方那就随意写了……</p>
