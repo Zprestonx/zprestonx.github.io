@@ -13,7 +13,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>-spring -发送邮件</tag>
+        <tag>spring</tag>
+        <tag>发送邮件</tag>
       </tags>
   </entry>
   <entry>
@@ -24,7 +25,9 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>-spring -redis -缓存</tag>
+        <tag>spring</tag>
+        <tag>redis</tag>
+        <tag>缓存</tag>
       </tags>
   </entry>
   <entry>
@@ -35,7 +38,10 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>-spring -springMVC -mybatis -开发环境搭建</tag>
+        <tag>spring</tag>
+        <tag>springMVC</tag>
+        <tag>mybatis</tag>
+        <tag>开发环境搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -51,7 +57,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>-二叉树 -递归</tag>
+        <tag>二叉树</tag>
+        <tag>递归</tag>
       </tags>
   </entry>
   <entry>
@@ -62,7 +69,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>-二叉树 -递归</tag>
+        <tag>二叉树</tag>
+        <tag>递归</tag>
       </tags>
   </entry>
 </search>
