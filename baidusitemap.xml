@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/posts/97fc4ab0/</loc>
+    <lastmod>2017-11-14T09:20:36.494Z</lastmod>
+    <data>
+        <display>
+        <title>重建二叉树</title>
+        <pubTime>2017-08-21T06:08:13.000Z</pubTime>
+        
+        <tag>二叉树</tag>
+         
+        <tag>递归</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/posts/e3d30280/</loc>
     <lastmod>2017-11-14T09:16:12.675Z</lastmod>
     <data>
@@ -59,28 +81,6 @@
         <display>
         <title>二叉树中和为某一值的路径</title>
         <pubTime>2017-08-21T09:28:06.000Z</pubTime>
-        
-        <tag>二叉树</tag>
-         
-        <tag>递归</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/posts/97fc4ab0/</loc>
-    <lastmod>2017-11-14T07:37:00.788Z</lastmod>
-    <data>
-        <display>
-        <title>重建二叉树</title>
-        <pubTime>2017-08-21T06:08:13.000Z</pubTime>
         
         <tag>二叉树</tag>
          
