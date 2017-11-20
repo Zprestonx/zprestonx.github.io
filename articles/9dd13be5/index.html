@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="二叉树,递归," />
+  <meta name="keywords" content="spring,aop,面向切面," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="问题描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。">
-<meta name="keywords" content="二叉树,递归">
+<meta name="description" content="在软件开发中，散布于应用中多处的功能被称为横切关注点，这些横切关注点从概念上是与应用的业务逻辑相分离的，面向切面编程(AOP)所要解决的问题就是把这些横切关注点与业务逻辑相分离。 面向切面编程在实际编程中，如果要重用通用功能的话，最常见的面向对象的技术是继承或委托。但是，如果在整个应用中都使用相同的基类，继承往往会导致一个脆弱的对象体系，而使用委托可能需要对委托对象进行复杂的调用。在使用面向切面编">
+<meta name="keywords" content="spring,aop,面向切面">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重建二叉树">
-<meta property="og:url" content="http://www.zpreston.top/articles/97fc4ab0/index.html">
+<meta property="og:title" content="spring面向切面编程">
+<meta property="og:url" content="http://www.zpreston.top/articles/9dd13be5/index.html">
 <meta property="og:site_name" content="Zpreston的博客">
-<meta property="og:description" content="问题描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。">
+<meta property="og:description" content="在软件开发中，散布于应用中多处的功能被称为横切关注点，这些横切关注点从概念上是与应用的业务逻辑相分离的，面向切面编程(AOP)所要解决的问题就是把这些横切关注点与业务逻辑相分离。 面向切面编程在实际编程中，如果要重用通用功能的话，最常见的面向对象的技术是继承或委托。但是，如果在整个应用中都使用相同的基类，继承往往会导致一个脆弱的对象体系，而使用委托可能需要对委托对象进行复杂的调用。在使用面向切面编">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-14T09:20:36.494Z">
+<meta property="og:updated_time" content="2017-11-20T09:40:31.006Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重建二叉树">
-<meta name="twitter:description" content="问题描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。">
+<meta name="twitter:title" content="spring面向切面编程">
+<meta name="twitter:description" content="在软件开发中，散布于应用中多处的功能被称为横切关注点，这些横切关注点从概念上是与应用的业务逻辑相分离的，面向切面编程(AOP)所要解决的问题就是把这些横切关注点与业务逻辑相分离。 面向切面编程在实际编程中，如果要重用通用功能的话，最常见的面向对象的技术是继承或委托。但是，如果在整个应用中都使用相同的基类，继承往往会导致一个脆弱的对象体系，而使用委托可能需要对委托对象进行复杂的调用。在使用面向切面编">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://www.zpreston.top/articles/97fc4ab0/"/>
+  <link rel="canonical" href="http://www.zpreston.top/articles/9dd13be5/"/>
 
 
 
 
 
-  <title>重建二叉树 | Zpreston的博客</title>
+  <title>spring面向切面编程 | Zpreston的博客</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.zpreston.top/articles/97fc4ab0/">
+    <link itemprop="mainEntityOfPage" href="http://www.zpreston.top/articles/9dd13be5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zpreston">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">重建二叉树</h1>
+          <h1 class="post-title" itemprop="name headline">spring面向切面编程</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-21T14:08:13+08:00">
-                2017-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-20T15:27:54+08:00">
+                2017-11-20
               </time>
             
 
@@ -341,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/JavaWeb/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaWeb</span>
                   </a>
                 </span>
 
@@ -359,8 +359,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/articles/97fc4ab0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/articles/97fc4ab0/" itemprop="commentsCount"></span>
+                <a href="/articles/9dd13be5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/articles/9dd13be5/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -388,21 +388,37 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
-<a id="more"></a>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>假设输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}</p>
+        <p>在软件开发中，散布于应用中多处的功能被称为横切关注点，这些横切关注点从概念上是与应用的业务逻辑相分离的，面向切面编程(AOP)所要解决的问题就是把这些横切关注点与业务逻辑相分离。</p>
+<h3 id="面向切面编程"><a href="#面向切面编程" class="headerlink" title="面向切面编程"></a>面向切面编程</h3><p>在实际编程中，如果要重用通用功能的话，最常见的面向对象的技术是继承或委托。但是，如果在整个应用中都使用相同的基类，继承往往会导致一个脆弱的对象体系，而使用委托可能需要对委托对象进行复杂的调用。<br>在使用面向切面编程时，我们仍然可以在一个地方定义通用功能，但是可以通过声明的方式定义这个功能要以何种方式在何处应用，而无需修改受影响的类。横切关注点可以被模块化为特殊的类，这些类就被称为切面。<br>web应用中遍布整个应用的通用功能之一就是日志，接下来在spring应用中通过切面完成通用的日志功能——在每一个request执行前先打印请求的相关信息，然后再执行业务代码，执行完成后打印返回的结果。在应用部署上线后，可以通过日志排除故障范围。</p>
+<h3 id="AOP的三个最重要术语"><a href="#AOP的三个最重要术语" class="headerlink" title="AOP的三个最重要术语"></a>AOP的三个最重要术语</h3><ol>
+<li>通知<br>通知即切面的具体工作，定义了切面是什么以及何时使用，除了描述切面要完成的工作，还解决了何时执行这个工作的问题。spring切面可以应用5种类型的通知</li>
+</ol>
 <ul>
-<li>前序遍历顺序：根节点 -&gt; 左子树 -&gt; 右子树</li>
-<li>中序遍历顺序：左子树 -&gt; 根节点 -&gt; 右子树</li>
+<li>前置通知：在目标方法被调用前调用通知功能</li>
+<li>后置通知：在目标方法完成之后调用通知，此时不会关心方法的输出是什么</li>
+<li>返回通知：在目标方法成功执行后调用通知</li>
+<li>异常通知：在目标方法抛出异常后调用通知</li>
+<li>环绕通知：通知包裹了被通知的方法，被通知的方法调用之前和调用之后执行自定义的行为</li>
 </ul>
-<p>由前序和中序的遍历顺序我们可以得到以下信息：</p>
+<ol>
+<li><p>切点<br>通知定义了切面在“何时”工作，切点则定义了切面在“何处”工作，切点会匹配通知，指定一个或多个连接点使用切面。</p>
+</li>
+<li><p>切面<br>切面是切点和通知的结合，通知和切点共同定义了切面的全部内容——它是什么，在何时和何处完成其功能。</p>
+</li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><h3 id="maven添加依赖-pom-xml"><a href="#maven添加依赖-pom-xml" class="headerlink" title="maven添加依赖 pom.xml"></a>maven添加依赖 pom.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- cglib动态代理 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cglib<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- AspectJ包 使用Spring的aop时需要使用到aspectjrt包 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjrt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.6.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--aspectjweaver包 使用Spring的aop时需要使用到aspectjweaver包 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="spring配置aop切面-spring-aop-xml"><a href="#spring配置aop切面-spring-aop-xml" class="headerlink" title="spring配置aop切面 spring-aop.xml"></a>spring配置aop切面 spring-aop.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></div><div class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line"><span class="tag">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span></div><div class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></div><div class="line"><span class="tag"><span class="string">  http://www.springframework.org/schema/beans</span></span></div><div class="line"><span class="tag"><span class="string">  http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></div><div class="line"><span class="tag"><span class="string">  http://www.springframework.org/schema/aop</span></span></div><div class="line"><span class="tag"><span class="string">  http://www.springframework.org/schema/aop/spring-aop.xsd"</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- aop注解支持 使用cglib 不使用java动态代理--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span> <span class="attr">proxy-target-class</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:aspectj-autoproxy</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.zpreston.util.log.RequestLog"</span> <span class="attr">id</span>=<span class="string">"requestLog"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="定义切面"><a href="#定义切面" class="headerlink" title="定义切面"></a>定义切面</h3><p>spring使用AspectJ注解来通知声明方法，AspectJ提供了5个注解来定义通知，对应前面说到的5种通知类型</p>
 <ul>
-<li>1.前序序列的第一个节点总是该序列的根节点</li>
-<li>2.在中序序列中，以1得到的根节点为界，左边的序列为根节点的左子树，右边的序列为右子树</li>
-<li>3.通过2将前序和中序序列进行划分得到的左子树和右子树同样适用上述规则</li>
+<li>@After 通知方法会在目标方法返回或抛出异常后调用</li>
+<li>@AfterReturning 通知方法会在目标方法返回后调用</li>
+<li>@AfterThrowing 通知方法会在目标方法抛出异常后调用</li>
+<li>@Around 通知方法会将目标方法封装起来</li>
+<li>@Before 通知方法会在目标方法调用之前执行</li>
 </ul>
-<p>显然，从信息3可以看出来这道题可以采用递归的方式解决</p>
-<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二叉树结构</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    TreeNode left;</div><div class="line">    TreeNode right;</div><div class="line">    TreeNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> [] pre,<span class="keyword">int</span> [] in)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> myReConstructBinaryTree(pre,<span class="number">0</span>,pre.length-<span class="number">1</span>,in,<span class="number">0</span>,in.length-<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">参数：前序序列，前序序列第一个元素和最后一个元素的索引，后序序列，后序序列第一个元素和最后一个元素的索引</span></div><div class="line"><span class="comment">返回：重建二叉树的头结点</span></div><div class="line"><span class="comment">*/</span></div><div class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">myReConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> pre[],<span class="keyword">int</span> preHead,<span class="keyword">int</span> preTail,<span class="keyword">int</span> in[],<span class="keyword">int</span> inHead,<span class="keyword">int</span> inTail)</span></span>&#123;</div><div class="line">	<span class="comment">//头索引大于尾索引，说明序列的左子树或者右子树为空，返回null</span></div><div class="line">        <span class="keyword">if</span>(preHead&gt;preTail || inHead&gt;inTail) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	<span class="comment">//前序序列的第一个节点是该序列的根节点</span></div><div class="line">        TreeNode root=<span class="keyword">new</span> TreeNode(pre[preHead]);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=inHead;i&lt;=inTail;i++)&#123;</div><div class="line">		<span class="comment">//在中序序列中找到该节点</span></div><div class="line">            <span class="keyword">if</span>(pre[preHead]==in[i])&#123;</div><div class="line">			<span class="comment">//节点左边为左子树，右边为右子树，对他们分别进行重建二叉树的操作</span></div><div class="line">                root.left=myReConstructBinaryTree(pre,preHead+<span class="number">1</span>,preHead+i-inHead,in,inHead,i-<span class="number">1</span>);</div><div class="line">                root.right=myReConstructBinaryTree(pre,preHead+i-inHead+<span class="number">1</span>,preTail,in,i+<span class="number">1</span>,inTail);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">	<span class="comment">//返回重建后的二叉树的根节点</span></div><div class="line">        <span class="keyword">return</span> root;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>需要注意的是@Around注解的环绕通知，她接受了一个ProceedingJoinPoint作为参数，该参数是用来在通知中调用被通知的方法。<br>具体做法是当要将控制权交给被通知的方法时，调用ProceedingJoinPoint方法。如果不调用该方法的话，通知会阻塞对被通知方法的调用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Aspect</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestLog</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Logger logger = LoggerFactory.getLogger(RequestLog.class);</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> DEBUG_REQUEST = <span class="keyword">true</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> DEBUG_RESPONSE = <span class="keyword">false</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RequestLog</span><span class="params">()</span></span>&#123;</div><div class="line">        logger.info(<span class="string">"RequestLog init..."</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//Around定义环绕通知</span></div><div class="line">    <span class="comment">//execution定义切点，表示controller包下所有方法执行时都调用通知</span></div><div class="line">    <span class="meta">@Around</span>(<span class="string">"execution(* com.zpreston.controller..*.*(..))"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">logForRequest</span><span class="params">(ProceedingJoinPoint pjp)</span> <span class="keyword">throws</span> Throwable</span>&#123;</div><div class="line">        logger.debug(<span class="string">"=============RequestLog start=================="</span>);</div><div class="line"></div><div class="line">        <span class="keyword">long</span>  param_start = System.currentTimeMillis();</div><div class="line">        String className = pjp.getTarget().getClass().getName();</div><div class="line">        String methodName = pjp.getSignature().getName();</div><div class="line"></div><div class="line">        <span class="comment">//记录请求</span></div><div class="line">        <span class="keyword">if</span>(DEBUG_REQUEST)&#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                logger.info(<span class="string">"****************打印请求*******************"</span>);</div><div class="line">                HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</div><div class="line">                logger.info(<span class="string">"TimeStamp-时间戳:&#123;&#125;"</span>, DateTime.now().toString(<span class="string">"YY-MM-dd HH:mm:ss"</span>));</div><div class="line">                logger.info(<span class="string">"Class-请求的方法:&#123;&#125;"</span>,(className + <span class="string">"."</span> + methodName + <span class="string">"()"</span>));</div><div class="line">                <span class="keyword">if</span>(request.getMethod().equals(<span class="string">"GET"</span>))&#123;</div><div class="line">                    logger.info(<span class="string">"Url-请求的路径:&#123;&#125;"</span>,request.getRequestURL().append((request.getQueryString() == <span class="keyword">null</span> ?<span class="string">""</span>:<span class="string">"?"</span>+request.getQueryString())));</div><div class="line">                    logger.info(<span class="string">"Method-请求的方式:GET"</span>);</div><div class="line">                    logger.info(<span class="string">"Content-Type-数据格式:&#123;&#125;"</span>,request.getHeader(<span class="string">"Content-Type"</span>));</div><div class="line">                    Enumeration enumeration =  request.getParameterNames();</div><div class="line">                    <span class="keyword">while</span> (enumeration.hasMoreElements())&#123;</div><div class="line">                        String name = (String)enumeration.nextElement();</div><div class="line">                        String value = request.getParameter(name);</div><div class="line">                        logger.info(<span class="string">"Params-参数(form表单) ----key:&#123;&#125;----value:&#123;&#125;"</span>,name,value);</div><div class="line">                    &#125;</div><div class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(request.getMethod().equals(<span class="string">"POST"</span>))&#123;</div><div class="line">                    logger.info(<span class="string">"Url-请求的路径:&#123;&#125;"</span>,request.getRequestURL().append((request.getQueryString() == <span class="keyword">null</span> ?<span class="string">""</span>:<span class="string">"?"</span>+request.getQueryString())));</div><div class="line">                    logger.info(<span class="string">"Method-请求的方式:POST"</span>);</div><div class="line">                    logger.info(<span class="string">"Content-Type-数据格式:&#123;&#125;"</span>,request.getHeader(<span class="string">"Content-Type"</span>));</div><div class="line"></div><div class="line">                    <span class="keyword">if</span>(request.getHeader(<span class="string">"Content-Type"</span>).contains(<span class="string">"json"</span>))&#123;</div><div class="line">                        Object[] args = pjp.getArgs();</div><div class="line">                        logger.info(<span class="string">"Params-参数(JSON):&#123;&#125;"</span>, <span class="keyword">new</span> Gson().toJson(args));</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        Enumeration enumeration =  request.getParameterNames();</div><div class="line">                        <span class="keyword">while</span> (enumeration.hasMoreElements())&#123;</div><div class="line">                            String name = (String)enumeration.nextElement();</div><div class="line">                            String value = request.getParameter(name);</div><div class="line">                            logger.info(<span class="string">"Params-参数(form表单) ----key:&#123;&#125;----value:&#123;&#125;"</span>,name,value);</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    logger.info(<span class="string">"Method-请求的方式(非GET/POST,不解析请求参数):&#123;&#125;"</span>,request.getMethod());</div><div class="line"></div><div class="line">                &#125;</div><div class="line">            &#125;<span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                <span class="comment">//记录本地异常日志</span></div><div class="line">                logger.error(<span class="string">"==logger Dog  Watching  获取参数  Exception=="</span>);</div><div class="line">                logger.error(<span class="string">"异常栈:&#123;&#125;"</span>,e);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">long</span> param_end = System.currentTimeMillis();</div><div class="line">            logger.info(<span class="string">"****************打印请求  花费时间*******************&#123;&#125;ms"</span>,(param_end-param_start));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//执行</span></div><div class="line">        <span class="keyword">long</span> start_excute = System.currentTimeMillis();</div><div class="line">        logger.info(<span class="string">"****************业务代码执行*******************"</span>);</div><div class="line">        Object response = pjp.proceed();</div><div class="line">        <span class="comment">//统计耗时</span></div><div class="line">        <span class="keyword">long</span> end_excute = System.currentTimeMillis();</div><div class="line">        logger.info(<span class="string">"****************&#123;&#125;.&#123;&#125;() 业务代码执行   花费时间ms****************&#123;&#125;ms"</span>,className,methodName,(end_excute - start_excute));</div><div class="line"></div><div class="line">        <span class="comment">//记录返回</span></div><div class="line">        <span class="keyword">if</span>(DEBUG_RESPONSE)&#123;</div><div class="line">            <span class="keyword">long</span> ret_start = System.currentTimeMillis();</div><div class="line">            logger.info(<span class="string">"****************打印返回*******************"</span>);</div><div class="line">            logger.info(<span class="string">"返回数据(JSON格式):"</span>+ <span class="keyword">new</span> Gson().toJson(response));</div><div class="line">            <span class="keyword">long</span> ret_end = System.currentTimeMillis();</div><div class="line">            logger.info(<span class="string">"****************打印返回  花费时间ms*******************&#123;&#125;ms"</span>,(ret_end-ret_start));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        logger.debug(<span class="string">"=============RequestLog end=================="</span>);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> response;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -419,9 +435,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二叉树/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
+            <a href="/tags/spring/" rel="tag"><i class="fa fa-tag"></i> spring</a>
           
-            <a href="/tags/递归/" rel="tag"><i class="fa fa-tag"></i> 递归</a>
+            <a href="/tags/aop/" rel="tag"><i class="fa fa-tag"></i> aop</a>
+          
+            <a href="/tags/面向切面/" rel="tag"><i class="fa fa-tag"></i> 面向切面</a>
           
         </div>
       
@@ -449,15 +467,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/articles/e3d30280/" rel="next" title="spring定时发送邮件">
+                <i class="fa fa-chevron-left"></i> spring定时发送邮件
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/articles/ffeb5a9f/" rel="prev" title="二叉树中和为某一值的路径">
-                二叉树中和为某一值的路径 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序"><span class="nav-number">3.</span> <span class="nav-text">程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向切面编程"><span class="nav-number">1.</span> <span class="nav-text">面向切面编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP的三个最重要术语"><span class="nav-number">2.</span> <span class="nav-text">AOP的三个最重要术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码"><span class="nav-number">3.</span> <span class="nav-text">示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#maven添加依赖-pom-xml"><span class="nav-number">4.</span> <span class="nav-text">maven添加依赖 pom.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spring配置aop切面-spring-aop-xml"><span class="nav-number">5.</span> <span class="nav-text">spring配置aop切面 spring-aop.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义切面"><span class="nav-number">6.</span> <span class="nav-text">定义切面</span></a></li></ol></div>
             
 
           </div>
