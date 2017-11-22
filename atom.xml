@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zpreston.top/"/>
-  <updated>2017-11-22T07:48:03.748Z</updated>
+  <updated>2017-11-22T07:49:48.601Z</updated>
   <id>http://www.zpreston.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.zpreston.top/articles/efa1fd1f/"/>
     <id>http://www.zpreston.top/articles/efa1fd1f/</id>
     <published>2017-11-21T09:57:21.000Z</published>
-    <updated>2017-11-22T07:48:03.748Z</updated>
+    <updated>2017-11-22T07:49:48.601Z</updated>
     
     <content type="html"><![CDATA[<p>redis为我们提供了String字符串，List列表，无序集Set，有序集ZSet和哈希Hash值的存储，根据业务逻辑及场景的不同需要选择适当的值类型进行存储。之前在迭代一个项目的时候发现，项目中在redis中用List类型存储了一部分的用户信息，接手的时候发现了一个问题。按道理，在第一次获取到这一部分信息后，系统会在redis中缓存这部分数据，之后从redis请求会比直接从数据库中拉取要快。但是实际上每次获取这部分数据，耗费的时间总是差不多的，大概在180ms左右。查看了一下返回的数据，发现只有400条左右的用户信息。查询400条用户信息用了180ms，实际上是有点多了，意识到这个问题需要优化后，我对相关的代码进行了研究。最终的结果发现，项目中使用了redis的List类型来存储这部分用户信息，一行代表一个用户数据，但是跟前端交互则是使用json，返回数据时将List数据转换成json串再传给前端。第一次获取数据时redis确实缓存了这部分数据，第二次访问这部分数据时redis同样会返回，但是返回后redis就把这部分数据删了。第三次查询发现redis没有这部分数据，系统又从数据库中获取然后添加到redis中，所以导致响应时间变得比较长。</p>
 <a id="more"></a>
