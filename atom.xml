@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zpreston.top/"/>
-  <updated>2017-11-20T09:48:43.737Z</updated>
+  <updated>2017-11-22T07:48:03.748Z</updated>
   <id>http://www.zpreston.top/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redis踩坑</title>
+    <link href="http://www.zpreston.top/articles/efa1fd1f/"/>
+    <id>http://www.zpreston.top/articles/efa1fd1f/</id>
+    <published>2017-11-21T09:57:21.000Z</published>
+    <updated>2017-11-22T07:48:03.748Z</updated>
+    
+    <content type="html"><![CDATA[<p>redis为我们提供了String字符串，List列表，无序集Set，有序集ZSet和哈希Hash值的存储，根据业务逻辑及场景的不同需要选择适当的值类型进行存储。之前在迭代一个项目的时候发现，项目中在redis中用List类型存储了一部分的用户信息，接手的时候发现了一个问题。按道理，在第一次获取到这一部分信息后，系统会在redis中缓存这部分数据，之后从redis请求会比直接从数据库中拉取要快。但是实际上每次获取这部分数据，耗费的时间总是差不多的，大概在180ms左右。查看了一下返回的数据，发现只有400条左右的用户信息。查询400条用户信息用了180ms，实际上是有点多了，意识到这个问题需要优化后，我对相关的代码进行了研究。最终的结果发现，项目中使用了redis的List类型来存储这部分用户信息，一行代表一个用户数据，但是跟前端交互则是使用json，返回数据时将List数据转换成json串再传给前端。第一次获取数据时redis确实缓存了这部分数据，第二次访问这部分数据时redis同样会返回，但是返回后redis就把这部分数据删了。第三次查询发现redis没有这部分数据，系统又从数据库中获取然后添加到redis中，所以导致响应时间变得比较长。</p>
+<a id="more"></a>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>想了一下其实redis处理这部分数据时使用List值类型存储完全没有必要。需要缓存的这部分数据其实就是后台返回前端的数据，而前后端交互使用json，完全可以先将这部分List数据转换成json数据后缓存到redis中，之后再次请求时直接从redis获取到缓存的json数据后返回给前端，省下了将List数据转换成json串的时间。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>不过，redis在List数据被访问后会将该数据删除，String值类型的数据则不会有此情况。是为什么呢？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;redis为我们提供了String字符串，List列表，无序集Set，有序集ZSet和哈希Hash值的存储，根据业务逻辑及场景的不同需要选择适当的值类型进行存储。之前在迭代一个项目的时候发现，项目中在redis中用List类型存储了一部分的用户信息，接手的时候发现了一个问题。按道理，在第一次获取到这一部分信息后，系统会在redis中缓存这部分数据，之后从redis请求会比直接从数据库中拉取要快。但是实际上每次获取这部分数据，耗费的时间总是差不多的，大概在180ms左右。查看了一下返回的数据，发现只有400条左右的用户信息。查询400条用户信息用了180ms，实际上是有点多了，意识到这个问题需要优化后，我对相关的代码进行了研究。最终的结果发现，项目中使用了redis的List类型来存储这部分用户信息，一行代表一个用户数据，但是跟前端交互则是使用json，返回数据时将List数据转换成json串再传给前端。第一次获取数据时redis确实缓存了这部分数据，第二次访问这部分数据时redis同样会返回，但是返回后redis就把这部分数据删了。第三次查询发现redis没有这部分数据，系统又从数据库中获取然后添加到redis中，所以导致响应时间变得比较长。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.zpreston.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="redis" scheme="http://www.zpreston.top/tags/redis/"/>
+    
+      <category term="踩坑" scheme="http://www.zpreston.top/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>spring面向切面编程</title>
@@ -209,9 +237,9 @@
       <category term="JavaWeb" scheme="http://www.zpreston.top/categories/JavaWeb/"/>
     
     
-      <category term="spring" scheme="http://www.zpreston.top/tags/spring/"/>
-    
       <category term="redis" scheme="http://www.zpreston.top/tags/redis/"/>
+    
+      <category term="spring" scheme="http://www.zpreston.top/tags/spring/"/>
     
       <category term="缓存" scheme="http://www.zpreston.top/tags/%E7%BC%93%E5%AD%98/"/>
     
