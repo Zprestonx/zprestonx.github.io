@@ -92,11 +92,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[初探SpringMVC-第一个SpringMVC应用]]></title>
-    <url>%2Farticles%2Fbd45a759%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[二叉树中和为某一值的路径]]></title>
     <url>%2Farticles%2Fffeb5a9f%2F</url>
     <content type="text"><![CDATA[问题描述输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。 分析注意问题描述中的路径是从根节点到叶节点，搜索策略应该采用广度优先搜索，也就是先序遍历 需要两个存储变量，一个变量path存储当前搜索路径上的所有节点，一个变量result存储符合要求的所有路径每当搜索到一个节点，都将当前节点添加到path中当搜索到叶子节点时，判断当前路径上的节点值的和是否与目标值相等，相等则将当前路径添加到result中，之后在path中将当前叶子节点移除，回溯到上个节点继续判断由此可以看出path的操作数据的方式跟栈(Stack)很相似，可以将path定义成栈(Stack) 判断路径上的节点值的和是否与目标值相等时，可以有两种方法： target值初始为0，每当搜索到一个节点，把节点值累加到target上，搜索到叶子节点时判断target值与目标值是否一致 target值初始为目标值，每当搜索到一个节点，下次搜索时将target值减去当前节点值，搜索到叶子节点时判断target值与叶子节点值是否一致本次程序采用的时第2种方法 程序123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//二叉树的数据结构public class TreeNode&#123; int val=0; TreeNode left=null; TreeNode right=null; public TreeNode(int val)&#123;this.val=val;&#125;&#125;public class Solution&#123; public ArrayList&lt;ArrayList&lt;Integer&gt;&gt; FindPath(TreeNode root,int target) &#123; ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result=new ArrayList&lt;ArrayList&lt;Integer&gt;&gt;(); if(root==null) return result; Stack&lt;Integer&gt; path=new Stack&lt;Integer&gt;(); pathList(root,target,result,path); return result; &#125; /* 参数：二叉树的根节点，目标值，当前符合的所有路径，当前的搜索路径 返回：无 */ public void pathList(TreeNode root,int target,ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result,Stack&lt;Integer&gt; path)&#123; int num=root.val; //将当前搜索节点加入path中 path.push(num); //当搜索到叶子节点时 if(root.left==null &amp;&amp; root.right==null)&#123; //当前节点值与target值相等，说明path中的路径符合要求 if(num==target)&#123; ArrayList&lt;Integer&gt; tmp=new ArrayList&lt;Integer&gt;(); for(int i:path)&#123; tmp.add(i); &#125; //将当前搜索路径加入到result中 result.add(tmp); &#125; return; &#125; /* 注意每次递归向下搜索时应该将target值减去已搜索的节点值 每次回溯时应该移除该节点值 */ if(root.left!=null)&#123; pathList(root.left,target-num,result,path); path.pop(); &#125; if(root.right!=null)&#123; pathList(root.right,target-num,result,path); path.pop(); &#125; &#125;&#125;]]></content>
