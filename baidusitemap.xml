@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://www.zpreston.top/articles/844bf7a3/</loc>
+    <lastmod>2017-11-30T06:48:50.474Z</lastmod>
+    <data>
+        <display>
+        <title>spring消息通信之ActiveMQ</title>
+        <pubTime>2017-11-29T07:44:37.000Z</pubTime>
+        
+        <tag>spring</tag>
+         
+        <tag>ActiveMQ</tag>
+         
+        <tag>异步</tag>
+         
+        <tag>消息通信</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="http://www.zpreston.top/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.zpreston.top/articles/efa1fd1f/</loc>
     <lastmod>2017-11-22T07:49:48.601Z</lastmod>
     <data>
@@ -103,9 +129,9 @@
         <title>SSM框架整合Redis</title>
         <pubTime>2017-09-05T08:11:37.000Z</pubTime>
         
-        <tag>redis</tag>
-         
         <tag>spring</tag>
+         
+        <tag>redis</tag>
          
         <tag>缓存</tag>
          
