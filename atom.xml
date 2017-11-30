@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zpreston.top/"/>
-  <updated>2017-11-30T06:48:50.474Z</updated>
+  <updated>2017-11-30T06:49:39.561Z</updated>
   <id>http://www.zpreston.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.zpreston.top/articles/844bf7a3/"/>
     <id>http://www.zpreston.top/articles/844bf7a3/</id>
     <published>2017-11-29T07:44:37.000Z</published>
-    <updated>2017-11-30T06:48:50.474Z</updated>
+    <updated>2017-11-30T06:49:39.561Z</updated>
     
     <content type="html"><![CDATA[<p>异步消息通信是指一个应用程序向另一个应用程序间接发送消息的一种方式，这种不同于同步消息，异步消息无需等待对方的响应，不会阻塞当前程序。</p>
 <h3 id="异步消息的两个主要概念"><a href="#异步消息的两个主要概念" class="headerlink" title="异步消息的两个主要概念"></a>异步消息的两个主要概念</h3><ol>
